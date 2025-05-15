@@ -22,7 +22,7 @@ will be displayed without the ChimeraX- prefix.
   <Synopsis>Highlight tools for ChimeraX</Synopsis>
   <Description>Highlight tools for ChimeraX.
 
-Silhouette highlight for objects.
+Outline highlight for objects.
   </Description>
 
   <!-- Categories is a list where this bundle should appear -->
@@ -43,9 +43,9 @@ Silhouette highlight for objects.
     <ChimeraXClassifier>ChimeraX :: Command :: highlight :: General ::
       Print information about currently highlighted objects</ChimeraXClassifier>
     <ChimeraXClassifier>ChimeraX :: Command :: highlight add :: General ::
-      Add silhouette highlight to objects</ChimeraXClassifier>
+      Add highlight outline to objects</ChimeraXClassifier>
     <ChimeraXClassifier>ChimeraX :: Command :: highlight remove :: General ::
-      Remove silhouette highlight from objects</ChimeraXClassifier>
+      Remove highlight outline from objects</ChimeraXClassifier>
   </Classifiers>
 
 </BundleInfo> 
