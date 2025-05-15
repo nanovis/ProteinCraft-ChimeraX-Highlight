@@ -19,9 +19,15 @@ class _HighlightAPI(BundleAPI):
         # in bundle_info.xml.
 
         from . import cmd
-        if ci.name == "highlight hello":
-            func = cmd.hello
-            desc = cmd.hello_desc
+        if ci.name == "highlight":
+            func = cmd.highlight_info
+            desc = cmd.highlight_info_desc
+        elif ci.name == "highlight add":
+            func = cmd.add_highlights
+            desc = cmd.desc_add
+        elif ci.name == "highlight remove":
+            func = cmd.remove_highlights
+            desc = cmd.desc_rm
         else:
             raise ValueError(f"trying to register unknown command: {ci.name}")
 

@@ -40,8 +40,12 @@ Silhouette highlight for objects.
     <PythonClassifier>Development Status :: 1 - Alpha</PythonClassifier>
     <PythonClassifier>License :: Academic Free License</PythonClassifier>
     <!-- ChimeraX classifiers describe supplied functionality -->
-    <ChimeraXClassifier>ChimeraX :: Command :: highlight hello :: General ::
-      Print hello world message</ChimeraXClassifier>
+    <ChimeraXClassifier>ChimeraX :: Command :: highlight :: General ::
+      Print information about currently highlighted objects</ChimeraXClassifier>
+    <ChimeraXClassifier>ChimeraX :: Command :: highlight add :: General ::
+      Add silhouette highlight to objects</ChimeraXClassifier>
+    <ChimeraXClassifier>ChimeraX :: Command :: highlight remove :: General ::
+      Remove silhouette highlight from objects</ChimeraXClassifier>
   </Classifiers>
 
 </BundleInfo> 
