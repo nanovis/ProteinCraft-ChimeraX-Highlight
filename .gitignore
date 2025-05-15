@@ -1,0 +1,5 @@
+build/
+dist/
+ChimeraX_Highlight.egg-info
+data/run
+__pycache__/
