@@ -91,3 +91,28 @@ desc_rm = CmdDesc(
     synopsis='Remove residues from highlighting',
     required=[("residues", ResiduesArg)],
 )
+
+def reapply_highlights(session):
+    """Reapply all current highlights using their stored colors and strengths"""
+    if not _highlighted:
+        session.logger.info("No highlights to reapply")
+        return
+        
+    for residue, (color, strength) in _highlighted.items():
+        # Get the chain's most common color
+        chain_color = _get_chain_color(residue)
+        if chain_color is None:
+            chain_color = Color("black")
+            session.logger.warning(f"No common chain color found for residue {residue.name}, using black")
+            
+        # Interpolate between chain color and highlight color
+        highlight_color = _interpolate_color(chain_color, color.uint8x4(), strength)
+        
+        # Update the residue's ribbon color
+        residue.ribbon_color = highlight_color
+    
+    session.logger.info(f"Reapplied {len(_highlighted)} highlights")
+
+desc_reapply = CmdDesc(
+    synopsis='Reapply all current highlights. This is useful if the chain colors have changed and you want to update the highlights accordingly.',
+)

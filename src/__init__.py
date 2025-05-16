@@ -28,6 +28,9 @@ class _HighlightAPI(BundleAPI):
         elif ci.name == "highlight remove":
             func = cmd.remove_highlights
             desc = cmd.desc_rm
+        elif ci.name == "highlight reapply":
+            func = cmd.reapply_highlights
+            desc = cmd.desc_reapply
         else:
             raise ValueError(f"trying to register unknown command: {ci.name}")
 
