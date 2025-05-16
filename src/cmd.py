@@ -39,6 +39,10 @@ def _get_chain_color(residue):
 
 def _interpolate_color(color1, color2, strength):
     """Interpolate between two colors based on strength (0-1)"""
+    
+    # cap strength between 0.0 and 1.0
+    strength = max(0.0, min(strength, 1.0))
+
     r1, g1, b1, a1 = color1
     r2, g2, b2, _ = color2
     r = r1 + (r2 - r1) * strength
@@ -47,7 +51,7 @@ def _interpolate_color(color1, color2, strength):
     
     return (r, g, b, a1)
 
-def add_highlights(session, residues, color=Color("yellow"), strength=0.5):
+def add_highlights(session, residues, color=Color("red"), strength=0.5):
     """Add highlight to residues by interpolating between chain color and highlight color"""
     
     for r in residues:
@@ -67,7 +71,7 @@ def add_highlights(session, residues, color=Color("yellow"), strength=0.5):
 desc_add = CmdDesc(
     synopsis='Add residues for highlighting',
     required=[("residues", ResiduesArg)],
-    keyword=[("color", ColorArg), ("strength", FloatArg)],
+    optional=[("color", ColorArg), ("strength", FloatArg)],
 )
 
 def remove_highlights(session, residues):
