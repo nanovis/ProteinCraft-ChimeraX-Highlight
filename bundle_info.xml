@@ -22,7 +22,7 @@ will be displayed without the ChimeraX- prefix.
   <Synopsis>Highlight tools for ChimeraX</Synopsis>
   <Description>Highlight tools for ChimeraX.
 
-Outline highlight for objects.
+Highlight residues via interpolation between most common chain color and specified highlight color.
   </Description>
 
   <!-- Categories is a list where this bundle should appear -->
