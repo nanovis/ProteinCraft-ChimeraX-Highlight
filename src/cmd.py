@@ -63,7 +63,7 @@ def add_highlights(session, residues, color=Color("red"), strength=0.5):
             chain_color = Color("black")
             session.logger.warning(f"No common chain color found for residue {r.name}, using black")
         # Interpolate between chain color and highlight color
-        highlight_color = _interpolate_color(chain_color, color.rgba, strength)
+        highlight_color = _interpolate_color(chain_color, color.uint8x4(), strength)
         
         # Update the residue's ribbon color
         r.ribbon_color = highlight_color
