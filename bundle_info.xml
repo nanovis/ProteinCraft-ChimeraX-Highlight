@@ -41,11 +41,13 @@ Highlight residues via interpolation between most common chain color and specifi
     <PythonClassifier>License :: Academic Free License</PythonClassifier>
     <!-- ChimeraX classifiers describe supplied functionality -->
     <ChimeraXClassifier>ChimeraX :: Command :: highlight :: General ::
-      Print information about currently highlighted objects</ChimeraXClassifier>
+      Print information about currently highlighted residues</ChimeraXClassifier>
     <ChimeraXClassifier>ChimeraX :: Command :: highlight add :: General ::
-      Add highlight outline to objects</ChimeraXClassifier>
+      Add residues for highlighting</ChimeraXClassifier>
     <ChimeraXClassifier>ChimeraX :: Command :: highlight remove :: General ::
-      Remove highlight outline from objects</ChimeraXClassifier>
+      Remove residues from highlighting</ChimeraXClassifier>
+    <ChimeraXClassifier>ChimeraX :: Command :: highlight rm :: General ::
+      Remove residues from highlighting (alias for highlight remove)</ChimeraXClassifier>
   </Classifiers>
 
 </BundleInfo> 
