@@ -22,7 +22,8 @@ will be displayed without the ChimeraX- prefix.
   <Synopsis>Highlight tools for ChimeraX</Synopsis>
   <Description>Highlight tools for ChimeraX.
 
-Highlight residues via interpolation between most common chain color and specified highlight color.
+Highlight residues via interpolation between most common chain color and specified highlight color. 
+The transparency will not be touched, i.e. it will be kept at the most common chain color's level.
   </Description>
 
   <!-- Categories is a list where this bundle should appear -->
