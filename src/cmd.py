@@ -43,13 +43,17 @@ def _interpolate_color(color1, color2, strength):
     # cap strength between 0.0 and 1.0
     strength = max(0.0, min(strength, 1.0))
 
-    r1, g1, b1, a1 = color1
-    r2, g2, b2, _ = color2
+    # Convert to float for arithmetic
+    r1, g1, b1, a1 = map(float, color1)
+    r2, g2, b2, _ = map(float, color2)
+    
+    # Perform interpolation in float space
     r = r1 + (r2 - r1) * strength
     g = g1 + (g2 - g1) * strength
     b = b1 + (b2 - b1) * strength
     
-    return (r, g, b, a1)
+    # Convert back to uint8
+    return (int(r), int(g), int(b), int(a1))
 
 def add_highlights(session, residues, color=Color("red"), strength=0.5):
     """Add highlight to residues by interpolating between chain color and highlight color"""
